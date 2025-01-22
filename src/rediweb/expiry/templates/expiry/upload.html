@@ -1,0 +1,19 @@
+{% extends "expiry/base.html" %}
+{% block content %}
+
+<form action="{% url 'upload_file' %}" method="post" enctype="multipart/form-data">
+	{% csrf_token %}
+
+  <div class="grid">
+    <div class="s4">
+      <div class="field label prefix border">
+        <i>attach_file</i>
+        <input type="file" name="file" id="id_file">
+        <input type="text">
+        <label>File</label>
+      </div>
+    </div>
+    <button type="submit">Add</button>
+  </div>
+</form>
+{% endblock %}

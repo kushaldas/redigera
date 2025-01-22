@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="google" content="notranslate">
+	<title>Regigera</title>
+	<link href="https://cdn.jsdelivr.net/npm/beercss@3.8.0/dist/cdn/beer.min.css" rel="stylesheet">
+	<script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.8.0/dist/cdn/beer.min.js"></script>
+	<script type="module"
+		src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
+  <style>
+  .rotate {
+    animation: rotation 4s infinite linear;
+  }
+
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+      transform-origin: center;
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  </style>
+</head>
+
+<body class="light">
+	<nav class="left drawer min l">
+		<header>
+			<nav>
+				<img src="{% static 'expiry/sunet.png' %}" class="round extra">
+        <h6>SUNET</h6>
+			</nav>
+		</header>
+      {% comment %}<button class="small-round extra small-elevate">{% endcomment %}
+      <a href="/">
+			<i>workspace_premium</i>
+			<span>Start</span>
+      </a>
+		{% comment %}</button>{% endcomment %}
+
+	</nav>
+
+	<main class="responsive">
+    {% block content %}{% endblock %}
+	  <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+	</main>
+</body>
+
+</html>
+<html lang="en">
+
+
+
+<body>
+</body>
+
+</html>

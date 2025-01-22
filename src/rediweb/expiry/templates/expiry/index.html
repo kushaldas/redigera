@@ -1,0 +1,45 @@
+{% extends "expiry/base.html" %}
+{% block content %}
+{% if not up %}
+<p>You did not add any public key yet.</p>
+
+<a href="{% url 'upload_file' %}"><button class="border">Add a public key</button></a>
+
+{% else %}
+
+<div id="updated">
+<h5>{{ fingerprint }}</h5>
+
+<div class="row">
+  <div class="large-text">
+  Key expiry date: 
+  </div>
+  <div class="bold">{{ expiry }}</div>
+</div>
+
+<h5>Subkey details</h5>
+{% for sub in subkeys %}
+<div class="row">
+
+  <div class="large-text">
+    {{ sub.keytype }}
+  </div>
+  <div>
+    {{ sub.fingerprint }}
+  </div>
+  <div class="bold">
+   Expiry: {{ sub.expiry }}
+  </div>
+</div>
+{% endfor %}
+
+<div class="medium-space"></div>
+<div id="findyubi">
+
+<button class="small-round large" hx-get="{% url 'getyubikey' %}" hx-swap="outerHTML" hx-target="#findyubi">Check for Yubikey</button>
+
+</div>
+
+</div>
+{% endif %}
+{% endblock %}

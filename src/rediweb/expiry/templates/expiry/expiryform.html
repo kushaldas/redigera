@@ -1,0 +1,23 @@
+<!-- This form is for actual update input -->
+<div id="updated">
+  <h5>Edit expiry date</h5>
+  <form action="{% url 'update_expiry' %}" method="POST">
+    {% csrf_token %}
+
+    <fieldset>
+      <legend>Fill date and pin</legend>
+      <div class="field border lavel">
+        <input id='date' type='text' name="date">
+        <label>New Expiry Date</label>
+      </div>
+      <div class="field border lavel">
+        <input id='pin' type='password' name="pin">
+        <label>Yubikey User Pin</label>
+      </div>
+    </fieldset>
+
+    <div class="medium-space"></div>
+    <button hx-post="{% url 'update_expiry' %}" hx-target="#updated" hx-swap="outerHTML"
+      class="small-round large">Update</button>
+  </form>
+</div>

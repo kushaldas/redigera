@@ -1,0 +1,8 @@
+<!-- To verify that we have a Yubikey attached and we can access it -->
+<div id="findyubi">
+
+  <button class="small-round large" hx-get="{% url 'getyubikey' %}" hx-swap="outerHTML" hx-target="#findyubi">Check
+    for Yubikey</button>
+  <span class="error-text">Could find Yubikey.</span>
+
+</div>

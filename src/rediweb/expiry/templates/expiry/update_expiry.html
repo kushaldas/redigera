@@ -1,0 +1,19 @@
+{% load static %}
+<div id="updated">
+  <!-- The page shows the final update status -->
+  {% if not data %}
+  <div hx-get="{% url 'key_ready' %}" hx-trigger="every 4s" hx-target="#updated" hx-swap="outerHTML">
+    <img src="{% static 'expiry/hour-glass.svg' %}" alt="Wait" class="rotate">
+    <h5>Touch the Yubikey for signing (multiple times)</h5>
+  </div>
+  {% else %}
+
+  <div class="medium-space"></div>
+  <h5>Key Updated.</h5>
+  <div class="row">
+    <div>
+      <b>{{ filename }}</b>
+    </div>
+  </div>
+  {% endif %}
+</div>
