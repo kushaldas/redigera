@@ -18,3 +18,9 @@ On Linux if the window is blank, then start via the following:
 ```
 WEBKIT_DISABLE_COMPOSITING_MODE=1 briefcase dev
 ```
+
+## Output file
+
+The final key will be saved in your user's `Downloads` directory with
+`fingerprint.pub` filename (replace fingerprint with the real fingerprint of
+the primary key).
