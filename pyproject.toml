@@ -2,7 +2,7 @@
 [tool.briefcase]
 project_name = "redigera"
 bundle = "in.kushaldas"
-version = "0.0.1"
+version = "0.0.2"
 url = "https://github.com/kushaldas/redigera"
 license.file = "LICENSE"
 author = "Kushal Das"
