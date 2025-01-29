@@ -147,10 +147,9 @@ def key_ready(request):
     except:
         data = None
     if data: # Means we have the new key
+        # TODO: This whole section needs to be rewritten in future.
         dirname = Path.home() / "Downloads"
-        if not os.path.exists(dirname):
-            # TODO: Create the directory
-            pass
+        dirname.mkdir(exist_ok=True, parents=True)
         filename = dirname / f"{FINGERPRINT}.pub"
         with open(filename, "wb") as fobj:
             fobj.write(data)
