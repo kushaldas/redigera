@@ -2,7 +2,11 @@
 
 ## [unreleased]
 
+[0.0.3] - 2025-01-03
+
 ### Added
 
 - Inital project work
+- To verify packaging works
+- Allows updating expiry date of the primary and subkeys
 

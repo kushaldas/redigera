@@ -58,7 +58,7 @@ system_runtime_requires = [
     "libcanberra-gtk3-module",
     # Needed to provide WebKit2 at runtime
     # Note: Debian 11 and Ubuntu 20.04 require gir1.2-webkit2-4.0 instead
-    # "gir1.2-webkit2-4.1",
+    "gir1.2-webkit2-4.1",
 ]
 
 [tool.briefcase.app.redigera.linux.system.rhel]
