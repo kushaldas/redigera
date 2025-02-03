@@ -12,7 +12,7 @@ author_email = "mail@kushaldas.in"
 formal_name = "redigera"
 description = "To do various OpenPGP operations."
 long_description = """Allows Yubikey based OpenPGP operations."""
-icon = "images/icon_images/icon"
+icon = "images/icon_images/in.kushaldas.redigera"
 sources = [
     "src/redigera", "src/rediweb", 
 ]
